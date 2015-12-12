@@ -26,6 +26,16 @@ $ npm install chai-react-element
 
 This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you can use it everywhere.
 
+In your tests, have Chai use the plugin. Make sure you also use `sinon-chai`, otherwise the nested assertions will not work.
+```javascript
+var chai = require("chai");
+var sinonChai = require("sinon-chai");
+var sinonChaiInOrder = require("sinon-chai-in-order");
+
+chai.use(sinonChai);
+chai.use(sinonChaiInOrder);
+```
+
 ## Contributing
 
 ### Setup

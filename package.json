@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/electricmonk/sinon-chai-in-order.git"
+    "url": "https://github.com/electricmonk/sinon-chai-in-order"
   },
   "keywords": [
     "assertion",

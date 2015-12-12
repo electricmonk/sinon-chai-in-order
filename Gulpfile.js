@@ -19,8 +19,8 @@ gulp.task('transpile', ['clean'], function () {
     return gulp.src(sources, {base:'.'})
         .pipe(sourcemaps.init())
         .pipe(babel({
-            "presets": ["react", "es2015"]
-            //"plugins": ["transform-es2015-modules-umd"]
+            "presets": ["react", "es2015"],
+            "plugins": ["transform-es2015-modules-umd"]
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/'));

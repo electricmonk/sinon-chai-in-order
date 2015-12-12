@@ -1,0 +1,56 @@
+{
+  "name": "sinon-chai-in-order",
+  "version": "0.0.1",
+  "description": "A Chai plugin providing assertions on the order of Sinon spy calls",
+  "main": "dist/src/sinon-chai-in-order.js",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp transpile",
+    "start": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/electricmonk/sinon-chai-in-order.git"
+  },
+  "keywords": [
+    "assertion",
+    "assert",
+    "chai",
+    "chai-plugin",
+    "sinon",
+    "spy",
+    "test"
+  ],
+  "author": "shai.yallin@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/electricmonk/sinon-chai-in-order/issues"
+  },
+  "homepage": "https://github.com/electricmonk/sinon-chai-in-order#readme",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-plugin-transform-es2015-modules-umd": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "chai": "^3.4.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "imports-loader": "^0.6.5",
+    "mocha": "^2.3.4",
+    "mocha-loader": "^0.7.1",
+    "sinon": "^1.17.2",
+    "source-map-loader": "^0.1.5",
+    "source-map-support": "^0.4.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "yargs": "^3.31.0"
+  },
+  "dependencies": {
+    "sinon-chai": "^2.8.0"
+  }
+}

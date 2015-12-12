@@ -1,0 +1,10 @@
+.idea
+
+# Logs
+logs
+*.log
+
+# Source
+webpack.config.js
+Gulpfile.js
+.travis.yml

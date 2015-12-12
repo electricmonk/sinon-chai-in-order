@@ -1,6 +1,13 @@
 language: node_js
-
 node_js:
-  - "0.12"
-  - "node"
-  - "5.0"
+- '0.12'
+- node
+- '5.0'
+deploy:
+  provider: npm
+  email: shai.yallin@gmail.com
+  api_key:
+    secure: ezn1MrQXRU4fO39TNH6+ZBTfaS07u0A3+MjbGOk1jP/VkV9yIIjowDMYGGZCn6ZYVE11m73CHqm+urALtNelXXLqRv1ZePSc5AWjPgQv9ik+sYkSX9a7IgTEgLxZL+nHKqO3wzkycvQLZ5KOJaiyDijm6I/xOei1kywmq+Nn39gti4fItQMxysHPsesu970QaUwXgho6lJfWgLUcv7rO8h5mEENvEe74VagRacUSywEvcgQIOp8wQeeC2XwTt0lVgAn34xWJMc2675yBSHj5101FtkjuvOs3B7H+QPFJfOe1s/BT4aJzJjyW827lH99DplgZjGUIcG6d0oxYqYAyrfZGDskCJCnHa2ACWzq8H4kbQi1bnSCGqU4OLOZKpl04fv+tQK/czOqhDyD51/CUJyy60GCNfEbI9RtyeeFE0FTP4EJzYHs7XZhkur1LD6sza1E6qNezMPIb6+LCqLyy1z8bfqvjU/FXFfcXbiEo4LeUgUAXALnYhibTXLRFdZabnQetdZOQDWQJD24DkZjl/mMmM7FkPfOZK9bc7i5wEADj6FpVx30bcTCxmcHH/156EFZZI+Q2k9JyPu3T9zY82GtXglP+89CturrF0Z7dGWLF/+5OXoKKR7497bKuBYATPEWLFiezyZ1tx5fLHi4+sSrpncUYXjvxX6qoMEsyg6w=
+  on:
+    tags: true
+    repo: electricmonk/sinon-chai-in-order

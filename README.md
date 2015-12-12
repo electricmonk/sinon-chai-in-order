@@ -1,4 +1,5 @@
 # In-Order Sinon-Chai Assertions
+[![Build Status](https://travis-ci.org/electricmonk/sinon-chai-in-order.svg?branch=master)](https://travis-ci.org/electricmonk/sinon-chai-in-order)
 
 ## Motivation
 [Sinon-Chai](https://github.com/domenic/sinon-chai) provides Chai assertions for [Sinon.JS](http://sinonjs.org/).

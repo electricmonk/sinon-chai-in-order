@@ -1,6 +1,9 @@
 # In-Order Sinon-Chai Assertions
 [![Build Status](https://travis-ci.org/electricmonk/sinon-chai-in-order.svg?branch=master)](https://travis-ci.org/electricmonk/sinon-chai-in-order)
 
+[![Dependency Status](https://david-dm.org/electricmonk/sinon-chai-in-order.svg)](https://david-dm.org/electricmonk/sinon-chai-in-order)
+[![devDependency Status](https://david-dm.org/electricmonk/sinon-chai-in-order/dev-status.svg)](https://david-dm.org/electricmonk/sinon-chai-in-order#info=devDependencies)
+
 ## Motivation
 [Sinon-Chai](https://github.com/domenic/sinon-chai) provides Chai assertions for [Sinon.JS](http://sinonjs.org/).
 Unfortunately, it does not deal with making sure a spy was called multiple time in a specific order. This can result in awkward, non-fluent assertions:
@@ -25,16 +28,19 @@ In Node, just install using `npm`:
 $ npm install sinon-chai-in-order
 ```
 
-This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you can use it everywhere.
-
 In your tests, have Chai use the plugin. Make sure you also use `sinon-chai`, otherwise the nested assertions will not work.
 ```javascript
-var chai = require("chai");
-var sinonChai = require("sinon-chai");
-var sinonChaiInOrder = require("sinon-chai-in-order");
+import chai, {expect} from 'chai';
+import sinonChai from 'sinon-chai';
+import sinonChaiInOrder from 'sinon-chai-in-order';
 
 chai.use(sinonChai);
 chai.use(sinonChaiInOrder);
+```
+
+This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you can use it everywhere. However, it is exported as an ES6 module. If using ES5, please use:
+```javascript
+chai.use(require('chai-react-element').default);
 ```
 
 ## Contributing

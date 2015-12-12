@@ -22,7 +22,7 @@ expect(spy).inOrder.to.have.been.calledWith(1).then.calledWith(2).then.calledWit
 ## Setup
 In Node, just install using `npm`:
 ```
-$ npm install chai-react-element
+$ npm install sinon-chai-in-order
 ```
 
 This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you can use it everywhere.

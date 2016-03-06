@@ -43,6 +43,12 @@ This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you 
 chai.use(require('chai-react-element').default);
 ```
 
+### Interoperability
+This module conflicts with [Chai As Promised](https://github.com/domenic/chai-as-promised), where both modules attempt to add a `then` method to `chai.Assertion`. To work around it, override `chaiAsPromised.transferPromiseness` as follows:
+```js
+chaiAsPromised.transferPromiseness = function(a, b) {};
+```
+
 ## Contributing
 
 ### Setup

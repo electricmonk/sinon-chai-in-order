@@ -12,8 +12,21 @@ describe('.inOrder', function() {
         [1, 2, 3].forEach(spy);
 
         expect(() => {
-            expect(spy).inOrder.to.have.been.calledWith(1).then.calledWith(2).then.calledWith(3);
+            expect(spy).inOrder.to.have.been.calledWith(1)
+                               .subsequently.calledWith(2)
+                               .subsequently.calledWith(3);
         }).not.to.throw();
+    });
+
+    it('fails when assertion order is incorrect', function() {
+        const spy = sinon.spy();
+        [1, 2, 3].forEach(spy);
+
+        expect(() => {
+            expect(spy).inOrder.to.have.been.calledWith(1)
+                               .subsequently.calledWith(3)
+                               .subsequently.calledWith(2);
+        }).to.throw('expected spy to have been called with arguments 3');
     });
 
     it('fails when asserted object is not a spy', function() {
@@ -24,10 +37,12 @@ describe('.inOrder', function() {
     });
 });
 
-describe('.then', function() {
+describe('.subsequently', function() {
     it('does nothing if asserted object is not a spy call', function() {
         const obj = "obj";
-        expect(expect(obj).then).to.have.property("_obj").that.equals(obj);
+        expect(expect(obj).subsequently)
+          .to.have.property("_obj")
+          .that.equals(obj);
     });
 
     it('fails if no spy call was found', function() {
@@ -35,7 +50,8 @@ describe('.then', function() {
         spy(1);
 
         expect(() => {
-            expect(spy).inOrder.to.have.been.calledWith(1).then.calledWith(2);
+            expect(spy).inOrder.to.have.been.calledWith(1)
+                               .subsequently.calledWith(2);
         }).to.throw("spy was only called 1 time(s)");
     });
 });

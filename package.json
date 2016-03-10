@@ -1,6 +1,6 @@
 {
   "name": "sinon-chai-in-order",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Chai plugin providing assertions on the order of Sinon spy calls",
   "main": "dist/src/sinon-chai-in-order.js",
   "scripts": {

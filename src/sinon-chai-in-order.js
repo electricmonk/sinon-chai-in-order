@@ -10,7 +10,7 @@ export default function sinonChaiInOrder(chai, utils) {
         }
     });
 
-    chai.Assertion.overwriteProperty('then', function (_super) {
+    chai.Assertion.overwriteProperty('subsequently', function (_super) {
         return function() {
             const context = utils.flag(this, 'inOrderContext');
             if (context) {

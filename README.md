@@ -19,7 +19,9 @@ expect(spy.getCall(2).args[0]).to.equal(3);
 Using `sinon-chai-in-order`, you can say this instead:
 
 ```javascript
-expect(spy).inOrder.to.have.been.calledWith(1).then.calledWith(2).then.calledWith(3);
+expect(spy).inOrder.to.have.been.calledWith(1)
+                   .subsequently.calledWith(2)
+                   .subsequently.calledWith(3);
 ```
 
 ## Setup
@@ -41,12 +43,6 @@ chai.use(sinonChaiInOrder);
 This plugin is distributed in [UMD](https://github.com/umdjs/umd) format so you can use it everywhere. However, it is exported as an ES6 module. If using ES5, please use:
 ```javascript
 chai.use(require('chai-react-element').default);
-```
-
-### Interoperability
-This module conflicts with [Chai As Promised](https://github.com/domenic/chai-as-promised), where both modules attempt to add a `then` method to `chai.Assertion`. To work around it, override `chaiAsPromised.transferPromiseness` as follows:
-```js
-chaiAsPromised.transferPromiseness = function(a, b) {};
 ```
 
 ## Contributing
